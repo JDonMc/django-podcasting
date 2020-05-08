@@ -126,7 +126,7 @@ class Show(models.Model):
         settings.AUTH_USER_MODEL, related_name="podcast_shows",
         verbose_name=_("owner"),
         on_delete=models.PROTECT,
-        help_text=_("""Make certain the user account has a name and e-mail address."""))
+        help_text=_("""Make certain the user account has a name and e-mail address."""), on_delete=models.CASCADE)
 
     editor_email = models.EmailField(
         _("editor email"), blank=True,
